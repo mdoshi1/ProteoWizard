@@ -44,15 +44,14 @@ p {
   }
 }
 a {
-  color: #42DCA3;
+  color: #FAC74A;
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
 a:hover,
 a:focus {
-  text-decoration: none;
-  color: #1d9b6c;
+  color: #FAC74A;
 }
 .light {
   font-weight: 400;
@@ -230,6 +229,7 @@ a:focus {
 }
 .content-section {
   padding-top: 50px;
+  text-align: center;
 }
 .content-section h2 {
   border-bottom: 2px solid #FAC74A;
@@ -311,6 +311,7 @@ ul.banner-social-buttons {
 }
 footer {
   padding: 50px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
 }
 footer p {
   margin: 0;
