@@ -37,6 +37,9 @@ p {
   line-height: 1.5;
 }
 @media (min-width: 768px) {
+  h2 {
+    font-size: 40px;
+  }
   p {
     margin: 0 0 35px;
     font-size: 20px;
@@ -149,7 +152,7 @@ a:focus {
   margin-bottom: 0;
 }
 .intro .intro-body .intro-text {
-  font-size: 18px;
+  font-size: 24px;
 }
 @media (min-width: 768px) {
   .intro {
@@ -164,18 +167,27 @@ a:focus {
   }
 }
 .btn-circle {
-  width: 70px;
-  height: 70px;
+  width: 50px;
+  height: 50px;
   margin-top: 15px;
-  padding: 7px 16px;
-  border: 2px solid white;
+  padding: 5px 11px;
+  border: 1px solid white;
   border-radius: 100% !important;
-  font-size: 40px;
+  font-size: 28px;
   color: white;
   background: transparent;
   -webkit-transition: background 0.3s ease-in-out;
   -moz-transition: background 0.3s ease-in-out;
   transition: background 0.3s ease-in-out;
+}
+@media (min-width: 768px) {
+  .btn-circle {
+    width: 70px;
+    height: 70px;
+    padding: 7px 16px;
+    border: 2px solid white;
+    font-size: 40px;
+  }
 }
 .btn-circle:hover,
 .btn-circle:focus {
@@ -277,13 +289,19 @@ a:focus {
 .btn-custom {
   font-weight: normal;
   text-transform: none;
-  font-size: 40px;
+  font-size: 24px;
   display: block;
   border: 1px solid white;
   color: white;
   background-color: transparent;
-  width: 300px;
+  width: 150px;
   margin: auto;
+}
+@media (min-width: 768px) {
+  .btn-custom {
+    font-size: 40px;
+    width: 300px;
+  }
 }
 .btn-custom:hover,
 .btn-custom:focus {
@@ -310,11 +328,26 @@ ul.banner-social-buttons {
   }
 }
 footer {
-  padding: 50px 0;
-  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 25px 0;
+  background-color: #653990
+}
+footer h3 {
+  color: #FAC74A;
+  margin-bottom: 15px;
 }
 footer p {
   margin: 0;
+}
+footer > div > p {
+  font-size: 16px;
+}
+footer .row p {
+  margin: 0 0 15px;
+}
+@media (min-width: 768px) {
+  footer > div > p {
+    font-size: 18px;
+  }
 }
 ::-moz-selection {
   text-shadow: none;
