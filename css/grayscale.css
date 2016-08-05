@@ -287,6 +287,7 @@ a:focus {
   color: #FAC74A;
   background-color: #653990;
 }
+/* TODO: make color slide to next button and features slide */
 .btn-selected {
   border: 1px solid #653990;
   color: #FAC74A;

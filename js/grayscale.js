@@ -34,5 +34,7 @@ $('.navbar-collapse ul li a').click(function() {
   }
 });
 
+/* TODO: add javascript to General and Developer buttons */
+
 
 
