@@ -29,7 +29,7 @@ h6 {
   letter-spacing: 1px;
 }
 h2 {
-  font-size: 36px;
+  font-size: 36px; 
 }
 p {
   margin: 0 0 25px;
@@ -240,7 +240,7 @@ a:focus {
   }
 }
 .content-section {
-  padding-top: 50px;
+  padding: 50px 0;
   text-align: center;
 }
 .content-section h2 {
@@ -257,9 +257,9 @@ a:focus {
   background-size: cover;
   -o-background-size: cover;
 }
-@media (min-width: 767px) {
+@media (min-width: 768px) {
   .content-section {
-    padding-top: 100px;
+    padding: 100px 0;
   }
   .download-section {
     padding: 100px 0;
