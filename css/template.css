@@ -2,10 +2,22 @@ h1 {
 	font-size: 44px;
 	margin-bottom: 0px;
 }
+table {
+  font-size: 18px;
+  line-height: 1.5;
+}
+td {
+	padding-right: 20px;
+	padding-bottom: 20px;
+}
 @media (min-width: 768px) {
 	h1 {
 		font-size: 48px;
 	}
+	table {
+    	font-size: 20px;
+    	line-height: 1.6;
+  }
 }
 .content-section {
 	padding: 100px 0;
@@ -14,11 +26,17 @@ h1 {
 .content-section h1 {
 	border-bottom: 2px solid #FAC74A;
 }
-.content-section h2 {
+.content-section div div h2:nth-child(2) {
 	border-bottom: none;
 }
 .content-section ul {
 	font-size: 18px
+}
+.content-section table img {
+	height: 150px;
+	width: 150px;
+	border-radius: 50%;
+	border: 2px solid #653990;
 }
 @media (min-width: 768px) {
 	.content-section {

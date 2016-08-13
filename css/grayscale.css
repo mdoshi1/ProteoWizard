@@ -307,10 +307,17 @@ a:focus {
 @media (min-width: 768px) {
   .btn-default {
     margin-bottom: 25px;
+    border: 2px solid white;
+  }
+  .btn-default:hover,
+  .btn-default:focus,
+  .btn-selected {
+    border: 2px solid #653990;
   }
   .btn-custom {
     font-size: 40px;
     width: 300px;
+    border: 2px solid white;
   }
 }
 .btn-custom:hover,
