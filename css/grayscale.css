@@ -275,6 +275,7 @@ a:focus {
   border-radius: 0;
 }
 .btn-default {
+  width: 130px;
   margin-bottom: 15px;
   border: 1px solid white;
   color: white;
@@ -294,7 +295,6 @@ a:focus {
   background-color: #653990;
 }
 .btn-custom {
-  font-weight: normal;
   text-transform: none;
   font-size: 24px;
   display: block;
