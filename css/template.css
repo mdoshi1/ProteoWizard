@@ -6,6 +6,12 @@ table {
   font-size: 18px;
   line-height: 1.5;
 }
+thead {
+	background-color: #653990;
+}
+thead {
+	color: #FAC74A;
+}
 td {
 	padding-right: 20px;
 	padding-bottom: 20px;
@@ -46,6 +52,9 @@ form {
 .content-section ul li {
 	padding-bottom: 25px;
 	line-height: 1.5;
+}
+.content-section ul li ul li {
+	padding-bottom: 0;
 }
 .content-section table img {
 	height: 150px;
