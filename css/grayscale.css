@@ -9,7 +9,7 @@ body {
   /*font-family: "Lora", "Helvetica Neue", Helvetica, Arial, sans-serif;*/
   font-family: "Arial Narrow", sans-serif;
   color: white;
-  background-color: black;
+  background-color: #171814;
 }
 html {
   width: 100%;
@@ -67,7 +67,7 @@ a:focus {
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   /*font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;*/
   font-family: "Arial Narrow", sans-serif;
-  background-color: black;
+  background-color: #171814;
   font-size: 18px;
 }
 .navbar-custom .navbar-toggle {
@@ -114,7 +114,7 @@ a:focus {
 .nav .open > a,
 .nav .open > a:hover,
 .nav .open > a:focus {
-  background-color: black;
+  background-color: #171814;
 }
 .open > .dropdown-toggle {
   color: white;
@@ -139,7 +139,7 @@ a:focus {
   }
   .navbar-custom.top-nav-collapse {
     padding: 0;
-    background: black;
+    background: #171814;
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   }
 }
@@ -156,7 +156,7 @@ a:focus {
   text-align: center;
   color: white;
   background: url(../img/intro-bg.jpg) no-repeat bottom center scroll;
-  background-color: black;
+  background-color: #171814;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
