@@ -108,6 +108,25 @@ a:focus {
 .navbar-custom .nav li.active a:hover {
   color: white;
 }
+.dropdown-toggle {
+  cursor: pointer;
+}
+.nav .open > a,
+.nav .open > a:hover,
+.nav .open > a:focus {
+  background-color: black;
+}
+.open > .dropdown-toggle {
+  color: white;
+}
+.dropdown-menu-custom {
+  background-color: #4B4B4B;
+  font-size: 18px;
+  min-width: 148px;
+}
+.dropdown-menu-custom > li > a {
+  color: white;
+}
 @media (min-width: 768px) {
   .navbar-custom {
     /*padding: 20px 0;
