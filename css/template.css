@@ -6,6 +6,12 @@ table {
   font-size: 18px;
   line-height: 1.5;
 }
+thead {
+	background-color: #653990;
+}
+thead {
+	color: #FAC74A;
+}
 td {
 	padding-right: 20px;
 	padding-bottom: 20px;
@@ -40,12 +46,15 @@ form {
 .content-section div div h2:nth-child(2) {
 	border-bottom: none;
 }
-.content-section ul {
+.content-section ul, .content-section ol {
 	font-size: 18px
 }
-.content-section ul li {
+.content-section ul li, .content-section ol li {
 	padding-bottom: 25px;
 	line-height: 1.5;
+}
+.content-section ul li ul li {
+	padding-bottom: 0;
 }
 .content-section table img {
 	height: 150px;
@@ -57,10 +66,10 @@ form {
 	.content-section {
 		padding: 150px 0;
 	}
-	.content-section ul {
+	.content-section ul, .content-section ol {
 		font-size: 20px;
 	}
-	.content-section ul li {
+	.content-section ul li, .content-section ol li {
 		padding-bottom: 35px;
 		line-height: 1.6;
 	}
