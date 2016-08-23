@@ -34,7 +34,17 @@ $('.navbar-collapse ul li a').click(function() {
   }
 });
 
-/* TODO: add javascript to General and Developer buttons */
-
-
+// Toggles hidden divs on button click
+$('.content-section button').click(function() {
+    if (!($(this).hasClass('btn-selected'))) {
+        $('.content-section button').removeClass('btn-selected');
+        $(this).addClass('btn-selected');
+        var oldHidden = $('.hidden');
+        var oldShown = $('.shown');
+        oldHidden.removeClass('hidden');
+        oldHidden.addClass('shown');
+        oldShown.removeClass('shown');
+        oldShown.addClass('hidden');
+    }
+})
 
