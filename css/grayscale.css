@@ -265,22 +265,8 @@ a:focus {
 .content-section h2 {
   border-bottom: 2px solid #FAC74A;
 }
-.download-section {
-  width: 100%;
-  padding: 50px 0;
-  color: white;
-  background: url(../img/downloads-bg.jpg) no-repeat center center scroll;
-  background-color: black;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  -o-background-size: cover;
-}
 @media (min-width: 768px) {
   .content-section {
-    padding: 100px 0;
-  }
-  .download-section {
     padding: 100px 0;
   }
 }
@@ -294,8 +280,8 @@ a:focus {
   border-radius: 0;
 }
 .btn-default {
-  width: 130px;
-  margin-bottom: 15px;
+  width: 160px;
+  margin-bottom: 25px;
   border: 1px solid white;
   color: white;
   background-color: transparent;
@@ -321,11 +307,11 @@ a:focus {
   color: white;
   background-color: transparent;
   width: 150px;
-  margin: auto;
+  margin: 0 auto;
 }
 @media (min-width: 768px) {
   .btn-default {
-    margin-bottom: 25px;
+    margin-bottom: 35px;
     border: 2px solid white;
   }
   .btn-default:hover,
