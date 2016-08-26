@@ -63,11 +63,11 @@ form {
 	border: 2px solid #653990;
 }
 #project-image {
-	margin: 0 auto 45px;
+	margin: -25px auto 25px;
 	min-width: 100%;
 }
-.btn-default {
-	margin: 0;
+.form-check {
+	margin-bottom: 25px;
 }
 @media (min-width: 768px) {
 	.content-section {
@@ -81,6 +81,9 @@ form {
 		line-height: 1.6;
 	}
 	#project-image {
-		margin: 0 auto 55px;
+		margin: -35px auto 35px;
+	}
+	.form-check {
+		margin-bottom: 35px;
 	}
 }
