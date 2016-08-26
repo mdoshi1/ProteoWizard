@@ -354,6 +354,11 @@ footer > div > p {
 footer .row p {
   margin: 0 0 15px;
 }
+#sourceforge-banner {
+  width: 100%;
+  background-color: black;
+  text-align: center;
+}
 @media (min-width: 768px) {
   footer > div > p {
     font-size: 18px;
