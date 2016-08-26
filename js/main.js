@@ -48,3 +48,27 @@ $('.content-section button').click(function() {
     }
 })
 
+// Popup window for license agreements
+function popup(link, windowName) { 
+    if (!window.focus) 
+        return true;
+    var href;
+    if (typeof(link) == 'string') 
+        href = link;
+    else 
+        href = link.href; 
+    window.open(href, windowName, 'width=600,height=400,scrollbars=yes'); 
+    return false; 
+  }
+
+// Toggles currently shown license agreement
+function switchLicense(className) {
+    if ($('div.' + className).hasClass('hidden')) {
+        var oldHidden = $('div.' + className);
+        var oldShown = $('.shown');
+        oldHidden.removeClass('hidden');
+        oldHidden.addClass('shown');
+        oldShown.removeClass('shown');
+        oldShown.addClass('hidden');
+    }
+}
