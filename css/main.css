@@ -356,7 +356,7 @@ footer .row p {
 }
 #sourceforge-banner {
   width: 100%;
-  background-color: black;
+  background-color: #171814;
   text-align: center;
 }
 @media (min-width: 768px) {

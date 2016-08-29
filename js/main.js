@@ -1,21 +1,3 @@
-/*!
- * Start Bootstrap - Grayscale Bootstrap Theme (http://startbootstrap.com)
- * Code licensed under the Apache License v2.0.
- * For details, see http://www.apache.org/licenses/LICENSE-2.0.
- */
-
-// jQuery to collapse the navbar on scroll
-/*function collapseNavbar() {
-    if ($(".navbar").offset().top > 50) {
-        $(".navbar-fixed-top").addClass("top-nav-collapse");
-    } else {
-        $(".navbar-fixed-top").removeClass("top-nav-collapse");
-    }
-}
-
-$(window).scroll(collapseNavbar);
-$(document).ready(collapseNavbar);*/
-
 // jQuery for page scrolling feature - requires jQuery Easing plugin
 $(function() {
     $('a.page-scroll').bind('click', function(event) {
@@ -49,7 +31,7 @@ $('.content-section button').click(function() {
 })
 
 // Popup window for license agreements
-function popup(link, windowName) { 
+function popup(link, windowName) {
     if (!window.focus) 
         return true;
     var href;
@@ -59,7 +41,7 @@ function popup(link, windowName) {
         href = link.href; 
     window.open(href, windowName, 'width=600,height=400,scrollbars=yes'); 
     return false; 
-  }
+}
 
 // Toggles currently shown license agreement
 function switchLicense(className) {
@@ -71,10 +53,10 @@ function switchLicense(className) {
         oldShown.removeClass('shown');
         oldShown.addClass('hidden');
     }
+}
 
-/* Software selector */
-
-$("#softwareType").change(function() {
+// Software selector
+$('#softwareType').change(function() {
     if ($(this).data('options') == undefined) 
         $(this).data('options', $('#downloadType option').clone());
     var id = $(this).val();
@@ -104,6 +86,17 @@ fileNameBaseMap.set("ProteoWizard_Windows_X86_64_pwizBindingsCli_ExampleProject"
 
 // Downloads specified software 
 function download() {
+    var name = document.getElementById('inputName').value;
+    if (!validateName(name)) {
+        alert("The name field cannot be left blank.");
+        return
+    }
+
+    var email = document.getElementById('inputEmail').value;
+    if (!validateEmail(email)) {
+        alert("Invalid email address.");
+        return;
+    }
 
     if (!document.getElementById('license-agreements').checked) {
         alert("You must accept the license agreements before downloading.");
@@ -176,6 +169,18 @@ function download() {
     downloadURL = downloadURL + "?guest=1";
 
     window.location=downloadURL;
+}
+
+// Validates name of downloader
+function validateName(name) {
+    var nameRegex = /^[A-Za-z\s]+$/;
+    return nameRegex.test(name);
+}
+
+// Validates email of downloader
+function validateEmail(email) {
+    var emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return emailRegex.test(email);
 }
 
 // Cross-domain AJAX request 
