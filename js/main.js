@@ -65,32 +65,13 @@ $('#softwareType').change(function() {
 });
 $('#softwareType').change();
 
-// Map containing key-value pairs of buildID-filename 
-var fileNameBaseMap = new Map();
-fileNameBaseMap.set("bt36", "pwiz-bin-windows-x86-vc120-release-XXX.tar.bz2");
-fileNameBaseMap.set("bt36i", "pwiz-setup-XXX-x86.msi");
-fileNameBaseMap.set("bt83", "pwiz-bin-windows-x86_64-vc120-release-XXX.tar.bz2");
-fileNameBaseMap.set("bt83i", "pwiz-setup-XXX-x86_64.msi");
-fileNameBaseMap.set("bt23", "pwiz-bin-darwin-x86_64-xgcc42-release-XXX.tar.bz2");
-fileNameBaseMap.set("bt17", "pwiz-bin-linux-x86_64-gcc48-release-XXX.tar.bz2");
-fileNameBaseMap.set("bt81", "pwiz-src-XXX.tar.bz2");
-fileNameBaseMap.set("bt81n", "pwiz-src-without-v-XXX.tar.bz2");
-fileNameBaseMap.set("bt211", "libpwiz_msvc_XXX.zip");
-fileNameBaseMap.set("bt212", "libpwiz_msvc_XXX.zip");
-fileNameBaseMap.set("Bumbershoot_Windows_X86_64_i", "IDPicker-XXX-x86_64.msi")
-fileNameBaseMap.set("ProteoWizard_Bumbershoot_Windows_X86_i", "IDPicker-XXX-x86.msi")
-fileNameBaseMap.set("Bumbershoot_Windows_X86_64", "bumbershoot-bin-windows-vc120-release-XXX.tar.bz2");
-fileNameBaseMap.set("ProteoWizard_Bumbershoot_Windows_X86", "bumbershoot-bin-windows-vc120-release-XXX.tar.bz2");
-fileNameBaseMap.set("ProteoWizard_Bumbershoot_Linux_X86_64", "bumbershoot-bin-linux-gcc48-release-XXX.tar.bz2");
-fileNameBaseMap.set("ProteoWizard_Windows_X86_64_pwizBindingsCli_ExampleProject", "pwiz-CLI-example-project.tar.bz2");
-
 // Downloads specified software 
 function download() {
-    var name = document.getElementById('inputName').value;
+    /*var name = document.getElementById('inputName').value;
     if (!validateName(name)) {
         alert("The name field cannot be left blank.");
         return
-    }
+    }*/
 
     var email = document.getElementById('inputEmail').value;
     if (!validateEmail(email)) {
@@ -127,7 +108,8 @@ function download() {
         winInstaller = '_i';
     }
 
-    var remoteURL = "http://teamcity.labkey.org/app/rest/buildTypes/id:" + downloadTypeString + "/builds?status=SUCCESS&count=1&guest=1";
+    var remoteURL = "http://teamcity.labkey.org/guestAuth/app/rest/builds/status:SUCCESS,buildType:id:" + downloadTypeString + "/artifacts/children";
+    //alert("Remote URL: " + remoteURL);
 
     var teamCityInfoString = "";
     var request = createCORSRequest("GET", remoteURL);
@@ -138,37 +120,11 @@ function download() {
         request.send();
     }
 
-    var matches = teamCityInfoString.match(/build id=\"(\d+)\"/);
-    var buildId = matches[1];
-
-    /*var versionURL = "";
-    if (fileNameBaseMap[downloadType].match(/IDPicker/)) 
-        versionURL = "http://teamcity.labkey.org/repository/download/" + downloadTypeString + "/" + buildId + ":id/IDPICKER_VERSION?guest=1";
-    else 
-        versionURL = "http://teamcity.labkey.org/repository/download/" + downloadTypeString + "/" + buildId + ":id/VERSION?guest=1";
-*/
-    var versionURL = "http://teamcity.labkey.org/repository/download/" + downloadTypeString + "/" + buildId + ":id/VERSION?guest=1";
-
-    var versionString = "";
-    request = createCORSRequest("GET", versionURL);
-    if (request) {
-        request.onload = function(){
-            versionString = request.responseText;
-            alert(versionString);
-        };
-        request.send();
-    }
-
-    if (!winInstaller)
-        versionString = versionString.replace(/\./g, "_");
-    var downloadURL = "http://teamcity.labkey.org/repository/download/" + downloadTypeString + "/" + buildId + ":id/" + fileNameBaseMap.get(downloadType);
-
-    downloadURL = downloadURL.replace(/XXX/g, versionString);
-    //var downloadFile = baseName(downloadURL);
-    //alert(downloadFile);
-    downloadURL = downloadURL + "?guest=1";
-
-    window.location=downloadURL;
+    //alert("TeamCity Info String: " + teamCityInfoString);
+    var matches = teamCityInfoString.match(/content href=\"([\w\/\-.:]+)\"/);
+    var downloadURL = matches[1];
+    //alert("Download URL: " + buildId);
+    window.location = "http://teamcity.labkey.org" + downloadURL;
 }
 
 // Validates name of downloader
