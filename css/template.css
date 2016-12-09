@@ -68,7 +68,7 @@ details[open] summary::-webkit-details-marker {
 	padding-bottom: 25px;
 	line-height: 1.5;
 }
-.content-section ul li ul li {
+.content-section ul li ul li, .content-section ul li ol li {
 	padding-bottom: 0;
 }
 .content-section table img {

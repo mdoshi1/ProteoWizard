@@ -94,8 +94,26 @@
             <div class="col-xs-10 col-xs-offset-1">
                 <h1>Documentation for Developers</h1>
                 <h2 id="subheading">A developer's guide to ProteoWizard</h2>
-                <p>This page offers an overview of the ProteoWizard project. It provides a layout of the files included in the ProteoWizard download and an outline of the various ProteoWizard projects. A <a href="#FAQ" class="page-scroll">FAQ</a> section can be found at the bottom of the page.</p>
+                <p>This page offers an overview of the ProteoWizard project. It provides a layout of the files included in the ProteoWizard download and an outline of the various ProteoWizard projects. Please visit our <a href="faq.html">FAQ</a> and <a href="support.html">Support</a> pages if you have any questions.</p>
                 <p>For full code documentation, please visit the <a href="http://proteowizard.sourceforge.net/dox/index.html">Source Code</a> pages.</p>
+
+                <h2>Getting Started</h2>
+                <p>Below are a couple of documents you might find useful when starting to develop with ProteoWizard.</p>
+                <ul class="list-unstyled">
+                    <li>
+                        <ul>
+                            <li>
+                                <a href="docs/pwiz-checkout-quickbuild-msvs-run.pdf">ProteoWizard Build Run Direct from MSVS</a>
+                            </li>
+                            <li>
+                                <a href="docs/pwiz-checkout-quickbuild-run.pdf">ProteoWizard Checkout and Quickbuild run</a>
+                            </li>
+                            <li>
+                                <a href="docs/pwiz-build-direct-from-msvs.pdf">ProteoWizard Checkout Quickbuild MSVS run</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
 
                 <h2>Directory Layout</h2>
                 <ul class="list-unstyled">
@@ -156,10 +174,14 @@
 
                 <h2>Code Conventions</h2>
                 <p>A code module consists of an interface (Foo.hpp), implementation (Foo.cpp), and a unit test (FooTest.cpp).   The interface should be self-documenting, with optional inclusion of comment markup for automated documentation tools (e.g. Doxygen).   The unit test serves two purposes:</p>
-                <ol>
-                    <li>To exercise the module's interface and validate its behavior independent of other modules.</li>
-                    <li>To document the intended usage of the code module.</li>
-                </ol>
+                <ul class="list-unstyled">
+                    <li>
+                        <ol>
+                            <li>To exercise the module's interface and validate its behavior independent of other modules.</li>
+                            <li>To document the intended usage of the code module.</li>
+                        </ol>
+                    </li>
+                </ul>
                 <p>Clients of a code module should never need to look at the implementation for questions about usage.</p>
             </div>
         </div>
