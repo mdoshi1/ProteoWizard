@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="Michael Doshi">
 
-    <title>ProteoWizard: Projects</title>
+    <title>ProteoWizard: FAQ</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -92,40 +92,67 @@
     <section id="info" class="container content-section">
         <div class="row">
             <div class="col-xs-10 col-xs-offset-1">
-                <h1>Projects</h1>
-                <h2 id="subheading">A different flavor for everyone</h2>
-                <ul class="list-inline text-center">
-                    <li>
-                        <button id="prot-btn" class="btn btn-default btn-lg btn-selected">ProteoWizard</button>
-                    </li>
-                    <li>
-                        <button id="bumb-btn" class="btn btn-default btn-lg">Bumbershoot</button>
-                    </li>
-                    <li>
-                        <button id="sky-btn" class="btn btn-default btn-lg">Skyline</button>
-                    </li>
-                </ul>
-
-                <div id="prot-content" class="shown">
-                    <img src="img/proteowizard-project.png" class="project-img img-responsive">
-                    <p>ProteoWizard provides a modular and extensible set of open-source, cross-platform tools and libraries. The tools perform proteomics data analyses; the libraries enable rapid tool creation by providing a robust, pluggable development framework that simplifies and unifies data file access, and performs standard chemistry and LCMS dataset computations.</p>
-                    
-                    <h2>The Objective</h2>
-                    <p>The primary goal of ProteoWizard is to eliminate the existing barriers to proteomic software development so that researchers can focus on the development of new analytic approaches, rather than having to dedicate significant resources to mundane (if important) tasks, like reading data files.</p>
-                    <p>The first challenge of writing analysis tools is reading the myriad of data formats prevalent throughout the proteomics field. In addition to the open mzML, mzXML, and mzData formats, each vendor typically encodes their data in a vendor-specific, proprietary, closed format. The third challenge is the lack of a single, standard cross-platform library that performs common calculations, such as protein digestion, mass computation, peak integration, charge state detection and isotope deconvolution. Consequently, these calculations have been repeatedly implemented in the course of developing more sophisticated tools.</p>
-                    <p>As the proteomics field continues to grow, an increasing number of research groups are writing custom software for data analysis. Our goal is for ProteoWizard to become a repository where proteomics software developers can share their work, and benefit from the work of others. We welcome contributions of existing code, or new projects that will benefit the proteomics community.</p>
-
-                    <h2>History</h2>
-                    <p>The ProteoWizard software project was initiated in 2007, by the Mallick lab, at the Spielberg Family Center for Applied Proteomics. We are extremely grateful to Dr. David Agus for his initial and ongoing support for this initiative. Since 2007, numerous other groups have been actively contributing code, and expertise to the project. Notably, the MacCoss group at University of Washington and the Tabb group at Vanderbilt Unversity. In 2010, The ProteoWizard Project was spun out from the Center for Applied Molecular Medicine, at the University of Southern California, into a California, Non-Profit Corporation - the ProteoWizard Software Foundation. We are greatly appreciative to the USC Stevens Institute for helping with the creation of the ProteoWizard Software Foundation.</p>
-                </div>
-                <div id="bumb-content" class="hidden">
-                    <img src="img/bumbershoot-project.png" class="project-img img-responsive">
-                    <p>Bumbershoot is a suite of proteomic tools developed by the Tabb Lab at Vanderbilt University. The suite includes standard database search (MyriMatch), spectral library search (Pepitome), tag-based search (DirecTag/TagRecon), proteomic quality control (Quameter), and parsimonious protein assembly (IDPicker). These tools use ProteoWizard primarily for reading/writing proteomic file formats, but also for generic tasks such as in silico protein digestion.</p>
-                </div>
-                <div id="sky-content" class="hidden">
-                    <img src="img/skyline-project.png" class="project-img img-responsive">
-                    <p>Skyline is a freely-available and open source Windows client application for building Selected Reaction Monitoring (SRM) / Multiple Reaction Monitoring (MRM), Parallel Reaction Monitoring (PRM - Targeted MS/MS), Data Independent Acquisition (DIA/SWATH) and targeted DDA with MS1 quantitative methods and analyzing the resulting mass spectrometer data. It aims to employ cutting-edge technologies for creating and iteratively refining targeted methods for large-scale quantitative mass spectrometry studies in life sciences.</p>
-                </div>
+                <h1>FAQ</h1>
+                <h2 id="subheading">We have all the answers</h2>
+                <p>Here is a compilation of the most frequently asked questions we have received. Click on a question to see its answer. Don't see your particular question? Check out our <a href="support.html">support</a> page to find out where to direct your question, so we can best answer it.</p>
+                
+                <details>
+                    <summary><b>What is ProteoWizard?</b></summary>
+                    <p>ProteoWizard is a set of tools and libraries to facilitate proteomics data analysis and to facilitate developing applications for proteomics data analysis.</p>
+                </details>
+                <details>
+                    <summary><b>How do I cite ProteoWizard?</b></summary>
+                    <p>
+                        If you use or incorporate the ProteoWizard tools or libraries, please cite our Nature Biotechnology Commentary
+                        <br>
+                        <br>
+                        A cross-platform toolkit for mass spectrometry and proteomics. Chambers, M.C., MacLean, B., Burke, R., Amode, D., Ruderman, D.L., Neumann, S., Gatto, L., Fischer, B., Pratt, B., Egertson, J., Hoff, K., Kessner, D., Tasman, N., Shulman, N., Frewen, B., Baker, T.A., Brusniak, M.-Y., Paulse, C., Creasy, D., Flashner, L., Kani, K., Moulding, C., Seymour, S.L., Nuwaysir, L.M., Lefebvre, B., Kuhlmann, F., Roark, J., Rainer, P., Detlev, S., Hemenway, T., Huhmer, A., Langridge, J., Connolly, B., Chadick, T., Holly, K., Eckels, J., Deutsch, E.W., Moritz, R.L., Katz, J.E., Agus, D.B., MacCoss, M., Tabb, D.L. & Mallick, P. Nature Biotechnology 30, 918-920 (2012). <a href="http://www.nature.com/nbt/journal/v30/n10/full/nbt.2377.html"><b>Article&nbsp;&rarr;</b></a>
+                        <br>
+                        <br>
+                        and/or Our Bioinformatics Application Note [<a href="http://bioinformatics.oxfordjournals.org/cgi/content/abstract/btn323?ijkey=BNjsLHD6Ki2zYgS&keytype=ref" target="_blank">abstract</a>] [<a href="http://bioinformatics.oxfordjournals.org/cgi/reprint/btn323?ijkey=BNjsLHD6Ki2zYgS&keytype=ref" target="_blank">pdf</a>]
+                        <br>
+                        <br>
+                        ProteoWizard: Open Source Software for Rapid Proteomics Tools Development 
+                        <br>
+                        Darren Kessner; Matt Chambers; Robert Burke; David Agus; Parag Mallick 
+                        <br>
+                        Bioinformatics 2008; doi: 10.1093/bioinformatics/btn323
+                    </p>
+                </details>
+                <details>
+                    <summary><b>What is the current status of ProteoWizard?</b></summary>
+                    <p>We have released version 2.1.x of the library, together with a set of command line tools. Source and binary packages are available for download from our download page or from our SourceForge project page.</p>
+                </details>
+                <details>
+                    <summary><b>What formats does ProteoWizard support?</b></summary>
+                    <p>
+                        On all platforms: mzML (1.1 and 1.0), mzXML, MGF
+                        <br>
+                        <br>
+                        On Windows, with vendor libraries: Thermo, Agilent, Bruker, Thermo, Waters and AB Sciex.
+                    </p>
+                </details>
+                <details>
+                    <summary><b>Who is using ProteoWizard?</b></summary>
+                    <p>
+                        Hundreds of labs around the world are using different ProteoWizard tools. The central developers are at the Center for Applied Molecular Medicine (CAMM) at the University of Southern California, the Canary Center for Early Detection at Stanford University, the Vanderbilt University Mass Spectrometry Research Center and at the MacCoss lab at the University of Washington, Seattle. Each of these groups use ProteoWizard extensively in daily data analysis.
+                        <br>
+                        <br>
+                        The ProteoWizard libraries are also being used by the Trans-Proteomic Pipeline (TPP) and the Computational Proteomics Analysis System (CPAS) tools for mzML support.
+                    </p>
+                </details>
+                <details>
+                    <summary><b>I want to contribute!</b></summary>
+                    <p>Great! Drop Matt an email: <a href="mailto:matt.chambers@proteowizard.org" target="_top">matt.chambers@proteowizard.org</a> and he'll get you signed up to the subversion repository.</p>
+                </details>
+                <details>
+                    <summary><b>Where is your subversion repository?</b></summary>
+                    <p>To checkout the entire proteowizard, you can issue the command svn co https://svn.code.sf.net/p/proteowizard/code/trunk/pwiz your_local_directory Or you can browse the repository at: https://sourceforge.net/p/proteowizard/code/</p>
+                </details>
+                <details>
+                    <summary><b>What's next on the development roadmap?</b></summary>
+                    <p>We (CAMM) have begun collaboration with other proteomics software groups, including the Vanderbilt University Mass Spectrometry Research Center, University of Washington, Insilicos Software, and the Seattle Proteome Center at the Institute for Systems Biology (ISB/SPC), with the goal of providing a single standard software library for proteomic data analysis. The first immediate goal is to combine efforts to add support for all vendor-specific proprietary data formats. Our immediate priorities are putting together a simple GUI, supporting mzIdentML, and extending ProteoWizard to other languages by adding SWIG support.</p>
+                </details>
             </div>
         </div>
     </section>
@@ -170,9 +197,6 @@
 
     <!-- Plugin JavaScript -->
     <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-
-    <!-- Theme JavaScript -->
-    <script src="js/main.js"></script>
 
 </body>
 

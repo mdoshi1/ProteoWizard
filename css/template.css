@@ -20,6 +20,18 @@ form {
 	margin: 0 0 25px;
 	font-size: 18px;
 }
+details {
+	margin: 0 0 25px;
+}
+details[open] {
+	color: white;
+}
+details[open] summary {
+	color: #FAC74A;
+}
+details[open] summary::-webkit-details-marker {
+    color: white;
+}
 @media (min-width: 768px) {
 	h1 {
 		font-size: 48px;
@@ -27,11 +39,14 @@ form {
 	table {
     	font-size: 20px;
     	line-height: 1.6;
-  }
-  form {
-  	margin: 0 0 35px;
-  	font-size: 20px;
-  }
+  	}
+	form {
+  		margin: 0 0 35px;
+  		font-size: 20px;
+  	}
+  	details {
+  		font-size: 0 0 35px;
+  	}
 }
 .underline {
 	border-bottom: 2px solid #FAC74A;
