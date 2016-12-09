@@ -67,7 +67,7 @@ form {
 	min-width: 100%;
 }
 .form-check {
-	margin-bottom: 25px;
+	/*margin-bottom: 25px;*/
 }
 @media (min-width: 768px) {
 	.content-section {
@@ -84,6 +84,6 @@ form {
 		margin: -35px auto 35px;
 	}
 	.form-check {
-		margin-bottom: 35px;
+		/*margin-bottom: 35px;*/
 	}
 }
