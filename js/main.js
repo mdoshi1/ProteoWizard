@@ -18,7 +18,7 @@ $('.navbar-collapse ul li a').click(function() {
 
 // Toggles hidden divs on button click
 $('.content-section button').click(function() {
-    if (!($(this).hasClass('btn-selected'))) {
+    if (!($(this).hasClass('btn-selected')) && $(this).attr('id') != 'download-btn') {
         $('.content-section button').removeClass('btn-selected');
         $(this).addClass('btn-selected');
 
@@ -90,8 +90,8 @@ function download() {
         return
     }*/
 
-    var email = document.getElementById('inputEmail').value;
-    if (!validateEmail(email)) {
+    var email = document.getElementById('inputEmail').value.trim();
+    if (email && !validateEmail(email)) {
         alert("Invalid email address.");
         return;
     }
