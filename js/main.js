@@ -133,15 +133,30 @@ function download() {
     if (request) {
         request.onload = function(){
             teamCityInfoString = request.responseText;
+
+            var matches = teamCityInfoString.match(/content href=\"([\w\/\-.:]+)\"/);
+            var downloadURL = matches[1];
+            if(email) {
+                writeEmailToFile(email, function() {
+                    window.location = "http://teamcity.labkey.org" + downloadURL;
+                });
+            } else {
+                window.location = "http://teamcity.labkey.org" + downloadURL;
+            }
         };
         request.send();
     }
+}
 
-    //alert("TeamCity Info String: " + teamCityInfoString);
-    var matches = teamCityInfoString.match(/content href=\"([\w\/\-.:]+)\"/);
-    var downloadURL = matches[1];
-    //alert("Download URL: " + buildId);
-    window.location = "http://teamcity.labkey.org" + downloadURL;
+// Writes email to file
+function writeEmailToFile(email, callback) {
+
+    $.post("js/ajax.php", {
+        email: email
+    }, function(data, status) {
+        console.log(status);
+        callback();
+    });
 }
 
 // Validates name of downloader
